@@ -1,18 +1,17 @@
 name: CI Workflow
 on:
   push:
-    branches:[ "main" ]
-  pull_request: 
-    branches:[ "main" ]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
     container: python:3.9-slim
-  steps:
-    uses: 
-    
-    - name: Checkout
-      uses: actions/checkout@v3
+    steps:
+    uses:
+    - name:  Checkout
+      uses:  actions/checkout@v3
 
     - name: Install dependencies
       run: |
